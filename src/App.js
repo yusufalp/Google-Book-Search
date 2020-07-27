@@ -6,14 +6,11 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      url: 'https://www.googleapis.com/books/v1/volumes?q=quilting',
+      url: '',
       books: []
     }
   }
   componentDidMount() {
-    this.fetchData(this.state.url)
-  }
-  componentDidUpdate(){
     this.fetchData(this.state.url)
   }
   fetchData(url){
@@ -37,10 +34,12 @@ class App extends React.Component {
       });
     });
   }
-  handleAdd(url){
-    this.setState({
-      url
-    })
+  handleAdd(url) { 
+    console.log(`handleAdd: ${url}`); 
+    this.setState({ 
+      url 
+    }) 
+    this.fetchData(url);
   }
   render(){
     return (
