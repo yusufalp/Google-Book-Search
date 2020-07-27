@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.header {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+form {
+  width: 50%;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 24px auto;
+  margin: auto;
+}
+
+.form {
+  background-color: beige;
+}
+
+button {
+  background-color: aquamarine;
+  padding: 6px 12px;
+  border-radius: 10px;
+  display: block;
+  margin: 6px auto;
+}
+
+img {
+  width: 120px;
+}
+
+.booklist {
+  text-align: center;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  flex: 1;
+  padding: 24px 0;
+}
+
+.item-3 {
+  flex: 3;
+  padding: 0 80px;
+}
+
+@media all and (min-width: 600px) {
+  .group {
+    display: flex;
+    flex-direction: row;
+  }
+}
