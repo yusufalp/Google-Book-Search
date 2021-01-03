@@ -1,7 +1,7 @@
 import React from 'react';
 
 class Form extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       userEntry: ''
@@ -10,7 +10,7 @@ class Form extends React.Component {
   handleChange = e => {
     this.setState({
       userEntry: e.target.value
-    })
+    });
   }
   handleSubmit = e => {
     e.preventDefault();
@@ -18,14 +18,14 @@ class Form extends React.Component {
     this.props.handleAdd(url);
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <div className='form'>
         <form onSubmit={e => this.handleSubmit(e)}>
           <label htmlFor='search'>Search </label>
-          <input 
-            type='text' 
-            name='search' 
+          <input
+            type='text'
+            name='search'
             id='search'
             value={this.state.userEntry}
             onChange={this.handleChange}
@@ -33,7 +33,7 @@ class Form extends React.Component {
           <button type='submit'>Go!</button>
         </form>
       </div>
-    )
+    );
   }
 }
 
