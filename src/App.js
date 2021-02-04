@@ -7,7 +7,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       url: '',
-      books: []
+      books: [],
+      error: null
     }
   }
   componentDidMount() {
@@ -24,8 +25,7 @@ class App extends React.Component {
       .then(res => res.json())
       .then(data => {
         this.setState({
-          books: data.items,
-          error: null
+          books: data.items
         });
       })
       .catch(err => {
@@ -35,7 +35,6 @@ class App extends React.Component {
       });
   }
   handleAdd(url) {
-    console.log(`handleAdd: ${url}`);
     this.setState({
       url
     });
