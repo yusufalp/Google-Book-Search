@@ -14,7 +14,7 @@ class Form extends React.Component {
   }
   handleSubmit = e => {
     e.preventDefault();
-    const url = `https://www.googleapis.com/books/v1/volumes?q=${this.state.userEntry}`
+    const url = `https://www.googleapis.com/books/v1/volumes?q=${this.state.userEntry}`;
     this.props.handleAdd(url);
   }
 
